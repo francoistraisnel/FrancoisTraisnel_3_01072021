@@ -303,15 +303,15 @@ footer h3 {
   color: #FFF;
   padding: 30px 0 30px 0;
 }
-footer__container {
+footer .footer__container {
   margin-left: 25px;
   line-height: 25px;
 }
-footer__container div {
+footer .footer__container div {
   display: flex;
   flex-direction: row;
 }
-footer__container div i {
+footer .footer__container div i {
   margin-right: 10px;
 }
 
