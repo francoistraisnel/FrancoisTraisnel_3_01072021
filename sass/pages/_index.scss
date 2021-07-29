@@ -1,0 +1,69 @@
+.location{
+    height: 50px;
+    background-color: $color-background-location;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+    input{
+        border: none;
+        outline: none;
+        background-color: $color-background-location;
+        font-weight: bolder;
+        font-size: 1em;
+        width: 110px;
+    }
+    form{
+        width: auto;
+    }
+}
+
+.presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: $color-background-1;
+    h1{
+        padding: 50px 0 25px 0;
+    }
+    h2{
+        padding: 0 0 34px 0;
+    }
+    &__margin{
+    margin-left: 10%;
+    margin-right: 10%;
+    }
+    
+}
+
+.reservation__btn{
+    font-weight: bolder;
+    background: linear-gradient($color-secondary, $color-primary);
+     margin-bottom: 60px;
+     color: $color-text-2;
+     padding: 22px;
+     border-radius: 42px;
+     text-align: center;
+     display: inline-block;
+}
+
+
+.fonctionnement{
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.fonctionnement__header, .container__title{
+    padding: 60px 15px 30px 15px
+}

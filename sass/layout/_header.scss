@@ -1,0 +1,18 @@
+header{
+    background-color: $color-background-header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    img{
+        width: 50%;
+        height: auto;
+    }
+    position: relative;
+
+    &__img{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
