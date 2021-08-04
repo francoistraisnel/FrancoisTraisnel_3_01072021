@@ -37,7 +37,7 @@ a {
   font-family: "Roboto", sans-serif;
 }
 
-h3 {
+.brand-font {
   font-family: "Shrikhand", sans-serif;
 }
 
@@ -81,6 +81,18 @@ footer .footer__container div {
 }
 footer .footer__container div i {
   margin-right: 10px;
+}
+
+.container {
+  background-color: #f6f6f6;
+  margin-bottom: 50px;
+}
+
+.wrap {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  justify-content: space-evenly;
 }
 
 .location {
@@ -304,17 +316,6 @@ footer .footer__container div i {
   background-color: #99e2d0;
   color: #008766;
   font-weight: bolder;
-}
-
-.container {
-  background-color: #f6f6f6;
-  margin-bottom: 50px;
-}
-.container .wrap {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 20px;
-  justify-content: space-evenly;
 }
 
 /*# sourceMappingURL=style.css.map */
