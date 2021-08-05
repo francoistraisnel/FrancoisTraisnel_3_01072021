@@ -6,6 +6,7 @@
 
 a {
   color: black;
+  text-decoration: none;
 }
 
 h1 {
@@ -25,10 +26,6 @@ p {
   font-size: 1em;
 }
 
-a {
-  text-decoration: none;
-}
-
 .bolder {
   font-weight: bolder;
 }
@@ -41,6 +38,10 @@ a {
   font-family: "Shrikhand", sans-serif;
 }
 
+.logo-font-size {
+  font-size: 2em;
+}
+
 header {
   background-color: #FFF;
   display: flex;
@@ -49,14 +50,12 @@ header {
   height: 63px;
   position: relative;
 }
-header img {
-  width: 50%;
-  height: auto;
-}
-header__img {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+
+.header-arrow {
+  font-size: 1.5em;
+  position: absolute;
+  top: 22px;
+  left: 3%;
 }
 
 footer {
@@ -102,6 +101,7 @@ footer .footer__container div i {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 0px 4px 12px -9px #353535;
 }
 .location i {
   display: flex;

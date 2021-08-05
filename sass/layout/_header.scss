@@ -4,15 +4,12 @@ header{
     justify-content: center;
     align-items: center;
     height: 63px;
-    img{
-        width: 50%;
-        height: auto;
-    }
     position: relative;
+}
+.header-arrow{
+    font-size: $font-size-arrow;
+    position: absolute;
+    top: 22px;
+    left: 3%;
 
-    &__img{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
 }

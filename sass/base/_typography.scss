@@ -1,7 +1,14 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+$font-size-brand: 2em;
+$font-size-arrow: 1.5em;
+
+
 
 .brand-font{
     font-family: 'Shrikhand', sans-serif;
+}
+.logo-font-size{
+    font-size: $font-size-brand;
 }
