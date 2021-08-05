@@ -3,11 +3,8 @@
 @import "./base/colors";
 @import "./layout/header";
 @import "./layout/footer";
-@import "./layout/container";
 @import "./pages/index";
 @import "./pages/menus";
 @import "./components/container__menu";
 @import "./components/index/fonctionnement__container";
-@import "./components/choix";
-@import "./components/btn";
-
+@import "./components/index/restaurants-liste";
