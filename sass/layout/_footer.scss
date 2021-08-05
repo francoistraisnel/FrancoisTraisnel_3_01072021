@@ -1,16 +1,17 @@
 footer{
     background-color:$color-background-footer;
     color: $color-text-2;
-    h3{
-        font-size: 1em;
-        width: 100px;
-        height: auto;
-        color: $color-text-2;
-        padding: 30px 0 30px 0;
-    }
+    
     padding-bottom: 30px;
 
     .footer__container{
+        > p:first-child{
+            font-size: 1em;
+            width: 100px;
+            height: auto;
+            color: $color-text-2;
+            padding: 30px 0 30px 0;
+        }
         margin-left: 25px;
         div{
             display: flex;
