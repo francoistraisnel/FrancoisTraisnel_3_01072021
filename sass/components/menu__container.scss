@@ -19,6 +19,15 @@
         }
     &__parts{
         width: 90%;
+        :nth-of-type(n+2):hover{
+            .menu__container__parts__choix__btn{
+                transform: translateX(0px);
+                &--logo{
+                    transform: rotate(1turn);
+                }
+    
+            }
+        }
         &__title{
             margin-bottom: 14px;
             ::after{
@@ -35,40 +44,83 @@
         &__choix{
             background-color: #FFF;
             display: flex;
-            padding: 10px;
             border-radius: 15px;
-            box-shadow: 0px 3px 10px 3px $color-box-shadow; 
+            box-shadow: 0px 0px 12px 1px $color-box-shadow; 
             margin-bottom: 15px;
-            > div{
+            overflow: hidden;
+
+            > div:first-child{
                 display: flex;
                 flex-direction: column;
                 width: 100%;
+                padding: 10px;
             }
             > div > div {
+                text-overflow:ellipsis;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
             }
-            animation: opacity 1s;
-
-            @keyframes opacity{
-                0% {
-                    opacity : 0;
-                }
-                100% {
-                    opacity : 1;
-                }
-            }
+            
         &__btn{
+            width: 70px;
             display: flex;
-            align-items: center;  
-            transform : scaleX(0);
-            transform-origin: 50% 0%;
-            :hover{
-                transform: scaleX(1)
+            justify-content: center;
+            align-items: center;
+            background: $color-tertiary;
+            color: white;
+            transform: translateX(61px);
+            transition: 0.5s;
+            transform-origin: 100% 50%;
+            &--logo{
+                transition: 0.5s linear;
+
+            }
+            
             }
 
         }
+    
     }
+}
+
+.animation-delay1{
+    animation: delay-1 3s ease-in;
+}
+.animation-delay2{
+    animation: delay-2 3s ease-in;
+}
+.animation-delay3{
+    animation: delay-3 3s ease-in;
+}
+
+@keyframes delay-1{
+    0%{
+        opacity: 0;
+    }
+    33%{
+        opacity: 1;
+    }
+}
+@keyframes delay-2{
+    0%{
+        opacity: 0;
+    }
+    33%{
+        opacity: 0;
+    }
+    66%{
+        opacity: 1;
+    }
+}
+@keyframes delay-3{
+    0%{
+        opacity: 0;
+    }
+    66%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }

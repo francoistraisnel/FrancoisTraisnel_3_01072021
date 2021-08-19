@@ -65,8 +65,12 @@
     
 }
 
-.fonctionnement__header, .container__title{
-    padding: 60px 15px 30px 15px
+.fonctionnement__header{
+    padding: 60px 15px 30px 15px;
+    @media all and (max-width:375px){
+        align-self: flex-start;
+
+    }
 }
 
 

@@ -16,7 +16,7 @@
 }
 
 .menu-background__img{
-    width: 375px;
+    max-width: 375px;
     height: 265px;
     object-fit: cover;
 }
@@ -28,5 +28,12 @@
     justify-content: center;
     align-items: center;
     padding-top: 50px;
+}
+
+.scale{
+    transform : rotate(0turn);
+    :active{
+        transform : rotate(2turn);
+    }
 }
 

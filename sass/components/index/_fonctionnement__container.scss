@@ -1,15 +1,13 @@
 .fonctionnement__container{
-    width: 325px;
+    height: 73px;
     background-color: $color-background-1;
     border-radius: 20px;
-    margin-bottom: 20px;
     box-shadow: 0px 4px 11px 2px $color-box-shadow;
     display: flex;
     flex-direction: row;
     align-items: center;
     position: relative;
     &__text{
-        padding: 35px 0 35px 0;
     }
     &__icon{
         padding-left: 37px;
@@ -30,6 +28,13 @@
         background-color: $color-primary;
         color: $color-text-2;
     }
+}
+ul{
+    width: 90%;
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 li:hover {
         background-color: $color-background-2;
