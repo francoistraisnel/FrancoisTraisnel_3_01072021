@@ -1,6 +1,8 @@
-.loader{
+
+$loader-time: 2s;
+.contenu{
     animation: opacity ease-out;
-    animation-duration: 4s;
+    animation-duration: $loader-time;
     @keyframes opacity{
         0%{
             opacity: 0;
@@ -15,12 +17,62 @@
 
 }
 
-.progress-bar{
-    height: 20px;
-    width: 50%;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+.loader__parts--1, .loader__parts--2, .loader__parts--3{
+    opacity: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: rotate(2turn);
+    animation: progress-bar $loader-time ease-out;
+    transition-duration: $loader-time ease-in-out;
+    @keyframes progress-bar{
+        0%{
+            opacity: 1;
+            transform: rotate(2turn);
+            
+        }
+        70%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
 }
+.loader__parts--1{
+    background: $color-primary;
+    
+}
+.loader__parts--2{
+    background: $color-secondary;
+}
+.loader__parts--3{
+    background: $color-tertiary;
+}
+
+.loader-p{
+    animation: loader-p $loader-time ease-in-out;
+    opacity: 0;
+    top: 32%;
+    left: 10%;
+    position: absolute;
+    font-size: 3em;
+   
+    @keyframes loader-p{
+        1%{
+            opacity: 1;
+        }
+        90%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+
+    }
+}
+
+

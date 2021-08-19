@@ -174,12 +174,14 @@ footer .footer__container div i {
 
 .menu-background__img {
   max-width: 375px;
-  height: 265px;
+  width: 100%;
+  max-height: 265px;
   object-fit: cover;
 }
 
 .commander {
-  width: 375px;
+  width: 100%;
+  max-width: 375px;
   background-color: #f6f6f6;
   display: flex;
   justify-content: center;
@@ -195,20 +197,22 @@ footer .footer__container div i {
 }
 
 .menu__container {
+  gap: 40px;
   margin-top: -30px;
   border-radius: 31px 31px 0 0px;
   background-color: #f6f6f6;
-  width: 375px;
+  max-width: 375px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .menu__container__title {
-  width: 320px;
-  padding: 45px 20px;
+  width: 100%;
+  padding-top: 45px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .menu__container__title i {
@@ -272,15 +276,15 @@ footer .footer__container div i {
 }
 
 .animation-delay1 {
-  animation: delay-1 3s ease-in;
+  animation: delay-1 0.8s ease-in;
 }
 
 .animation-delay2 {
-  animation: delay-2 3s ease-in;
+  animation: delay-2 0.8s ease-in;
 }
 
 .animation-delay3 {
-  animation: delay-3 3s ease-in;
+  animation: delay-3 0.8s ease-in;
 }
 
 @keyframes delay-1 {
@@ -433,9 +437,9 @@ li:hover i {
     margin-right: 5%;
   }
 }
-.loader {
+.contenu {
   animation: opacity ease-out;
-  animation-duration: 4s;
+  animation-duration: 2s;
 }
 @keyframes opacity {
   0% {
@@ -449,14 +453,61 @@ li:hover i {
   }
 }
 
-.progress-bar {
-  height: 20px;
-  width: 50%;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
+.loader__parts--1, .loader__parts--2, .loader__parts--3 {
+  opacity: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: rotate(2turn);
+  animation: progress-bar 2s ease-out;
+  transition-duration: 2s ease-in-out;
+}
+@keyframes progress-bar {
+  0% {
+    opacity: 1;
+    transform: rotate(2turn);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loader__parts--1 {
+  background: #9356DC;
+}
+
+.loader__parts--2 {
+  background: #FF79DA;
+}
+
+.loader__parts--3 {
+  background: #99E2D0;
+}
+
+.loader-p {
+  animation: loader-p 2s ease-in-out;
+  opacity: 0;
+  top: 32%;
+  left: 10%;
+  position: absolute;
+  font-size: 3em;
+}
+@keyframes loader-p {
+  1% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

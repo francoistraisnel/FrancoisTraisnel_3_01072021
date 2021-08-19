@@ -17,12 +17,14 @@
 
 .menu-background__img{
     max-width: 375px;
-    height: 265px;
+    width: 100%;
+    max-height: 265px;
     object-fit: cover;
 }
 
 .commander{
-    width: 375px;
+    width: 100%;
+    max-width: 375px;
     background-color: $color-background-1;
     display: flex;
     justify-content: center;
