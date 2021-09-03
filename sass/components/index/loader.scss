@@ -1,7 +1,49 @@
-
 $loader-time: 2s;
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    
+    z-index: 1;
+    gap: 20px;
+    width: 100%;
+
+}
+.loader-img{
+    width: 60%;
+    animation: loader-img $loader-time ease-in-out;
+    opacity: 0;
+    gap: 20px;
+    @media all and (min-width: 376px){
+        max-width: 33%;
+    }
+   
+    @keyframes loader-img{
+        1%{
+            opacity: 1;
+        }
+        90%{
+            opacity: 1;
+        }
+        100%{
+            display: none;
+        }
+
+    }
+}
+.loader-spinners{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+
 .contenu{
-    animation: opacity ease-out;
+    z-index: 2;
+    animation: opacity ease-in;
     animation-duration: $loader-time;
     @keyframes opacity{
         0%{
@@ -19,22 +61,19 @@ $loader-time: 2s;
 
 .loader__parts--1, .loader__parts--2, .loader__parts--3{
     opacity: 0;
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    transform: rotate(2turn);
-    animation: progress-bar $loader-time ease-out;
-    transition-duration: $loader-time ease-in-out;
-    @keyframes progress-bar{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    animation: spinners $loader-time ease-in-out;
+    transition-duration: $loader-time;
+    @keyframes spinners{
         0%{
-            opacity: 1;
-            transform: rotate(2turn);
-            
+            opacity: 0;            
         }
-        70%{
+        15%{
+            opacity: 1;
+        }
+        85%{
             opacity: 1;
         }
         100%{
@@ -42,37 +81,17 @@ $loader-time: 2s;
         }
     }
 }
+$spinner-time: 0.3s;
 .loader__parts--1{
     background: $color-primary;
     
 }
 .loader__parts--2{
     background: $color-secondary;
-}
+    }
 .loader__parts--3{
     background: $color-tertiary;
-}
-
-.loader-p{
-    animation: loader-p $loader-time ease-in-out;
-    opacity: 0;
-    top: 32%;
-    left: 10%;
-    position: absolute;
-    font-size: 3em;
-   
-    @keyframes loader-p{
-        1%{
-            opacity: 1;
-        }
-        90%{
-            opacity: 1;
-        }
-        100%{
-            opacity: 0;
-        }
-
     }
-}
+
 
 
