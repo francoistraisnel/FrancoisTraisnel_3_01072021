@@ -1,40 +1,72 @@
 .title-uppercase{
-    text-transform: uppercase;
-    
+    text-transform: uppercase; 
 }
-
 .arrow{
     font-size: 1.5em;
     position: absolute;
     top: 28%;
     left: 7%;
 }
-
 .menu{
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    box-shadow: inset 0px 4px 12px -9px $color-background-footer;
+    background: #F6F6F6;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.3fr 1.1fr 1.1fr 0.3fr; 
+    gap: 20px 0px; 
+    grid-template-areas: 
+    "title title"
+    "img entrees"
+    "plats desserts"
+    "commander commander";
+    justify-items: center;
     align-items: center;
     > .reservation__btn{
         margin: 50px 0 80px 0;
     }
 }
-
-
-.menu-background__img{
-    max-width: 375px;
-    width: 100%;
-    max-height: 265px;
-    object-fit: cover;    
+.menu__img{
+    border-radius: 20px;
+    width: 90%;
+    max-height: 320px;
+    object-fit: cover;
+    grid-area: img;
+    @media all and (min-width: 769px){
+        width: 75%;
+    }
+    @media all and (max-width: 375px){
+        width: 100%;
+        border-radius: 0;
+    }
 }
-
+.menu__title{
+    width: 100%;
+    padding-top: 45px;
+    grid-area: title;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "text icon"; 
+        i{
+            font-size: 1.6em;   
+        }
+    }
+.text {
+    justify-self: center;
+    grid-area: text; 
+}
+.icon { 
+    justify-self: flex-end;
+    margin-right: 10%;
+    grid-area: icon; 
+}
 .commander{
-    max-width: 375px;
-    background-color: $color-background-1;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 50px;
+    grid-area: commander;
 }

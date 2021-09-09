@@ -133,6 +133,7 @@ footer .footer__container div i {
   background: linear-gradient(#FF79DA, #9356DC);
   margin-bottom: 60px;
   color: #fff;
+  min-width: 200px;
   padding: 22px;
   border-radius: 42px;
   text-align: center;
@@ -175,73 +176,90 @@ footer .footer__container div i {
 }
 
 .menu {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  box-shadow: inset 0px 4px 12px -9px #353535;
+  background: #F6F6F6;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1.1fr 1.1fr 0.3fr;
+  gap: 20px 0px;
+  grid-template-areas: "title title" "img entrees" "plats desserts" "commander commander";
+  justify-items: center;
   align-items: center;
 }
 .menu > .reservation__btn {
   margin: 50px 0 80px 0;
 }
 
-.menu-background__img {
-  max-width: 375px;
-  width: 100%;
-  max-height: 265px;
+.menu__img {
+  border-radius: 20px;
+  width: 90%;
+  max-height: 320px;
   object-fit: cover;
+  grid-area: img;
 }
-
-.commander {
-  max-width: 375px;
-  background-color: #f6f6f6;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 50px;
+@media all and (min-width: 769px) {
+  .menu__img {
+    width: 75%;
+  }
+}
+@media all and (max-width: 375px) {
+  .menu__img {
+    width: 100%;
+    border-radius: 0;
+  }
 }
 
 .menu__title {
   width: 100%;
   padding-top: 45px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  grid-area: title;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "text icon";
 }
 .menu__title i {
   font-size: 1.6em;
 }
 
-.menu__choix {
-  max-width: 375px;
-  gap: 40px;
-  margin-top: -30px;
-  border-radius: 31px 31px 0 0px;
-  background-color: #f6f6f6;
+.text {
+  justify-self: center;
+  grid-area: text;
+}
+
+.icon {
+  justify-self: flex-end;
+  margin-right: 10%;
+  grid-area: icon;
+}
+
+.commander {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding-top: 50px;
+  grid-area: commander;
 }
-.menu__choix__parts {
+
+.menu__parts {
   width: 90%;
 }
-.menu__choix__parts :nth-of-type(n+2) > div {
+.menu__parts :nth-of-type(n+2) > div {
   overflow: hidden;
 }
-.menu__choix__parts :nth-of-type(n+2):hover .menu__choix__parts__detail__btn {
-  width: 25%;
+.menu__parts :nth-of-type(n+2):hover .menu__parts__detail__btn {
+  width: 75px;
   transform: scaleX(1);
 }
-.menu__choix__parts :nth-of-type(n+2):hover .menu__choix__parts__detail__btn--icon {
+.menu__parts :nth-of-type(n+2):hover .menu__parts__detail__btn--icon {
   transform: rotate(1turn);
 }
-.menu__choix__parts__title {
+.menu__parts__title {
   margin-bottom: 14px;
 }
-.menu__choix__parts__title ::after {
+.menu__parts__title ::after {
   margin-top: 6px;
   content: "";
   display: flex;
@@ -251,7 +269,7 @@ footer .footer__container div i {
   background-color: #99E2D0;
   margin-bottom: 15px;
 }
-.menu__choix__parts__detail {
+.menu__parts__detail {
   background-color: #FFF;
   display: flex;
   border-radius: 15px;
@@ -259,27 +277,24 @@ footer .footer__container div i {
   margin-bottom: 15px;
   overflow: hidden;
 }
-.menu__choix__parts__detail > div {
+.menu__parts__detail > div:first-child > p, .menu__parts__detail > div > div p:first-child {
+  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: inherit;
 }
-.menu__choix__parts__detail > div:first-child {
+.menu__parts__detail > div:first-child {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 10px;
 }
-.menu__choix__parts__detail > div > div {
+.menu__parts__detail > div > div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   overflow: hidden;
 }
-.menu__choix__parts__detail > div > div p:first-child {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: inherit;
-}
-.menu__choix__parts__detail__btn {
+.menu__parts__detail__btn {
   width: 0px;
   display: flex;
   justify-content: center;
@@ -290,8 +305,20 @@ footer .footer__container div i {
   transition: 0.5s;
   transform-origin: 100% 50%;
 }
-.menu__choix__parts__detail__btn--icon {
+.menu__parts__detail__btn--icon {
   transition: 0.5s linear;
+}
+
+.entrees {
+  grid-area: entrees;
+}
+
+.plats {
+  grid-area: plats;
+}
+
+.desserts {
+  grid-area: desserts;
 }
 
 .animation-delay1 {

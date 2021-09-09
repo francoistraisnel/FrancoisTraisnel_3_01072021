@@ -1,40 +1,17 @@
-.menu__title{
-    width: 100%;
-    padding-top: 45px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-        i{
-            font-size: 1.6em;    
-        }
-    }
-
-.menu__choix{
-    max-width: 375px;
-    gap: 40px;
-    margin-top: -30px;
-    border-radius: 31px 31px 0 0px;
-    background-color: $color-background-1;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    &__parts{
+.menu__parts{
         width: 90%;
         :nth-of-type(n+2) > div{
             overflow: hidden;
         }
         :nth-of-type(n+2):hover{
-            .menu__choix__parts__detail__btn{
-                width: 25%;
+            .menu__parts__detail__btn{
+                width: 75px;
                 transform: scaleX(1);
                 &--icon{
                     transform: rotate(1turn);
                 }
             }
         }
-
         &__title{
             ::after{
                 margin-top: 6px;
@@ -55,7 +32,9 @@
             box-shadow: 0px 0px 12px 1px $color-box-shadow; 
             margin-bottom: 15px;
             overflow: hidden;
-            > div{
+            > div:first-child > p, > div > div p:first-child{
+                white-space: nowrap;
+                text-overflow: ellipsis;
                 overflow: inherit;
             }
 
@@ -70,11 +49,6 @@
                 flex-direction: row;
                 justify-content: space-between;
                 overflow: hidden;
-                p:first-child{
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: inherit;
-                }
             }
             
         &__btn{
@@ -89,15 +63,23 @@
             transform-origin: 100% 50%;
             &--icon{
                 transition: 0.5s linear;
-
-            }
-            
-            }
-
+            }       
         }
-    
     }
 }
+
+.entrees { 
+    grid-area: entrees; 
+}
+.plats { 
+    grid-area: plats; 
+}
+.desserts { 
+    grid-area: desserts; 
+}
+
+
+
 $delay-menu: 0.8s;
 .animation-delay1{
     animation: delay-1 $delay-menu ease-in;
