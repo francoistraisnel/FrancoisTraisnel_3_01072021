@@ -1,4 +1,16 @@
-.menu__container{
+.menu__title{
+    width: 100%;
+    padding-top: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+        i{
+            font-size: 1.6em;    
+        }
+    }
+
+.menu__choix{
     max-width: 375px;
     gap: 40px;
     margin-top: -30px;
@@ -8,34 +20,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    &__title{
-        width: 100%;
-        padding-top: 45px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-            i{
-                font-size: 1.6em;    
-            }
-        }
     &__parts{
         width: 90%;
         :nth-of-type(n+2) > div{
             overflow: hidden;
         }
         :nth-of-type(n+2):hover{
-            .menu__container__parts__choix__btn{
+            .menu__choix__parts__detail__btn{
                 width: 25%;
                 transform: scaleX(1);
-                &--logo{
+                &--icon{
                     transform: rotate(1turn);
                 }
             }
         }
 
         &__title{
-            margin-bottom: 14px;
             ::after{
                 margin-top: 6px;
                 content: "" ;
@@ -46,8 +46,9 @@
                 background-color: $color-soulignement;
                 margin-bottom: 15px;
                 } 
+            margin-bottom: 14px;
             }
-        &__choix{
+        &__detail{
             background-color: #FFF;
             display: flex;
             border-radius: 15px;
@@ -86,7 +87,7 @@
             transform: scaleX(0);
             transition: 0.5s;
             transform-origin: 100% 50%;
-            &--logo{
+            &--icon{
                 transition: 0.5s linear;
 
             }
