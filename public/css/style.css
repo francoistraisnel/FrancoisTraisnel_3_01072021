@@ -15,7 +15,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.4em;
+  font-size: 1em;
 }
 
 h3 {
@@ -128,6 +128,7 @@ footer .footer__container div i {
 }
 
 .reservation__btn {
+  box-shadow: 0 0 3px 1px #b1b0b0;
   font-weight: bolder;
   background: linear-gradient(#FF79DA, #9356DC);
   margin-bottom: 60px;
@@ -136,6 +137,13 @@ footer .footer__container div i {
   border-radius: 42px;
   text-align: center;
   display: inline-block;
+  transition: ease-in-out 0.2s;
+}
+
+.reservation__btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(#ff8de0, #9e67e0);
+  box-shadow: 0 0 6px 1px #b1b0b0;
 }
 
 .fonctionnement {
@@ -155,6 +163,10 @@ footer .footer__container div i {
   }
 }
 
+.title-uppercase {
+  text-transform: uppercase;
+}
+
 .arrow {
   font-size: 1.5em;
   position: absolute;
@@ -163,6 +175,7 @@ footer .footer__container div i {
 }
 
 .menu {
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -180,28 +193,21 @@ footer .footer__container div i {
 }
 
 .commander {
-  width: 100%;
   max-width: 375px;
   background-color: #f6f6f6;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 50px;
 }
 
-.scale {
-  transform: rotate(0turn);
-}
-.scale :active {
-  transform: rotate(2turn);
-}
-
 .menu__container {
+  max-width: 375px;
   gap: 40px;
   margin-top: -30px;
   border-radius: 31px 31px 0 0px;
   background-color: #f6f6f6;
-  max-width: 375px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -299,6 +305,10 @@ footer .footer__container div i {
   animation: delay-3 0.8s ease-in;
 }
 
+.animation-delay4 {
+  animation: delay-4 0.8s ease-in;
+}
+
 @keyframes delay-1 {
   0% {
     opacity: 0;
@@ -353,7 +363,7 @@ footer .footer__container div i {
   align-items: center;
   border-radius: 100%;
   position: absolute;
-  top: 32px;
+  top: 25px;
   left: -11px;
   background-color: #9356DC;
   color: #fff;
@@ -450,37 +460,44 @@ li:hover i {
   }
 }
 .loader {
+  opacity: 0;
+  background: #FFF;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
-  height: 100%;
-  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  animation-name: loader;
+  animation-duration: 3s;
+  z-index: -1000;
   gap: 20px;
-  width: 100%;
+  width: 100vw;
+}
+@keyframes loader {
+  0% {
+    z-index: 5;
+    opacity: 1;
+  }
+  99% {
+    z-index: 5;
+    opacity: 1;
+  }
+  100% {
+    z-index: -1000;
+    opacity: 0;
+  }
 }
 
 .loader-img {
   width: 60%;
-  animation: loader-img 2s ease-in-out;
-  opacity: 0;
   gap: 20px;
 }
 @media all and (min-width: 376px) {
   .loader-img {
     max-width: 33%;
-  }
-}
-@keyframes loader-img {
-  1% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    display: none;
   }
 }
 
@@ -490,30 +507,13 @@ li:hover i {
   gap: 5px;
 }
 
-.contenu {
-  z-index: 2;
-  animation: opacity ease-in;
-  animation-duration: 2s;
-}
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .loader__parts--1, .loader__parts--2, .loader__parts--3 {
   opacity: 0;
   height: 30px;
   width: 30px;
   border-radius: 100%;
-  animation: spinners 2s ease-in-out;
-  transition-duration: 2s;
+  animation: spinners 3s ease-in-out;
+  transition-duration: 3s;
 }
 @keyframes spinners {
   0% {

@@ -1,3 +1,8 @@
+.title-uppercase{
+    text-transform: uppercase;
+    
+}
+
 .arrow{
     font-size: 1.5em;
     position: absolute;
@@ -6,6 +11,7 @@
 }
 
 .menu{
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -15,27 +21,20 @@
     }
 }
 
+
 .menu-background__img{
     max-width: 375px;
     width: 100%;
     max-height: 265px;
-    object-fit: cover;
+    object-fit: cover;    
 }
 
 .commander{
-    width: 100%;
     max-width: 375px;
     background-color: $color-background-1;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 50px;
 }
-
-.scale{
-    transform : rotate(0turn);
-    :active{
-        transform : rotate(2turn);
-    }
-}
-

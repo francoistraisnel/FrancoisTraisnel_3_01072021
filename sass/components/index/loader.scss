@@ -1,37 +1,41 @@
-$loader-time: 2s;
+$loader-time: 3s;
 .loader{
+    opacity: 0;
+    background: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: absolute;
-    height: 100%;
-    
-    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    animation-name: loader; 
+    animation-duration: $loader-time;
+    z-index: -1000;
     gap: 20px;
-    width: 100%;
+    width: 100vw;
+    @keyframes loader{
+        0%{
+            z-index: 5;
+            opacity: 1; 
+        }
+        99%{
+            z-index: 5;
+            opacity: 1;
+        }
+        100%{
+            z-index: -1000;
+            opacity: 0;
+        }
+    }
 
 }
 .loader-img{
     width: 60%;
-    animation: loader-img $loader-time ease-in-out;
-    opacity: 0;
     gap: 20px;
     @media all and (min-width: 376px){
         max-width: 33%;
-    }
-   
-    @keyframes loader-img{
-        1%{
-            opacity: 1;
-        }
-        90%{
-            opacity: 1;
-        }
-        100%{
-            display: none;
-        }
-
     }
 }
 .loader-spinners{
@@ -40,24 +44,6 @@ $loader-time: 2s;
     gap: 5px;
 }
 
-
-.contenu{
-    z-index: 2;
-    animation: opacity ease-in;
-    animation-duration: $loader-time;
-    @keyframes opacity{
-        0%{
-            opacity: 0;
-        }
-        99%{
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-}
 
 .loader__parts--1, .loader__parts--2, .loader__parts--3{
     opacity: 0;

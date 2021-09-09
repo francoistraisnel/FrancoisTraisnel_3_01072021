@@ -45,6 +45,7 @@
 }
 
 .reservation__btn{
+    box-shadow: 0 0 3px 1px $color-box-shadow-2;
     font-weight: bolder;
     background: linear-gradient($color-secondary, $color-primary);
      margin-bottom: 60px;
@@ -53,7 +54,15 @@
      border-radius: 42px;
      text-align: center;
      display: inline-block;
+     transition: ease-in-out 0.2s;
 }
+
+.reservation__btn:hover{
+    transform: scale(1.05);
+    background: linear-gradient($color-secondary-light, $color-primary-light);
+    box-shadow: 0 0 6px 1px $color-box-shadow-2;
+}
+
 
 
 .fonctionnement{

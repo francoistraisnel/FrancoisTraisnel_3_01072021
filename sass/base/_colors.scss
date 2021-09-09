@@ -1,5 +1,7 @@
 $color-primary: #9356DC;
+$color-primary-light: lighten(#9356DC, 4%);
 $color-secondary: #FF79DA;
+$color-secondary-light: lighten(#FF79DA, 4%);
 $color-tertiary: #99E2D0;
 $color-background-1: #f6f6f6;
 $color-background-2: #f5edff;
@@ -7,6 +9,7 @@ $color-background-3: #fff;
 $color-box-shadow: #d9d9d9;
 $color-text-2: #fff;
 $color-background-location: #eaeaea;
+$color-box-shadow-2: #b1b0b0;
 $color-pastille-background: #99e2d0;
 $color-pastille-text: #008766; 
 $color-background-footer: #353535;
