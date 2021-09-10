@@ -2,6 +2,7 @@
     text-transform: uppercase; 
 }
 .arrow{
+    color: black;
     font-size: 1.5em;
     position: absolute;
     top: 28%;
@@ -24,6 +25,10 @@
     > .reservation__btn{
         margin: 50px 0 80px 0;
     }
+    @media all and (max-width:425px){
+        display: flex;
+        flex-direction: column;
+    }
 }
 .menu__img{
     border-radius: 20px;
@@ -34,14 +39,15 @@
     @media all and (min-width: 769px){
         width: 75%;
     }
-    @media all and (max-width: 375px){
+    @media all and (max-width: 425px){
         width: 100%;
         border-radius: 0;
+        overflow: hidden;
     }
 }
 .menu__title{
     width: 100%;
-    padding-top: 45px;
+    margin-top: 45px;
     grid-area: title;
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -53,6 +59,14 @@
         i{
             font-size: 1.6em;   
         }
+    @media all and (max-width:425px){
+        display: flex;
+        justify-content: space-around;
+        background: $color-background-1;
+        padding-top: 10px;
+        margin-top: -50px;
+        border-radius: 31px 31px 0 0px;
+    }
     }
 .text {
     justify-self: center;
@@ -61,7 +75,10 @@
 .icon { 
     justify-self: flex-end;
     margin-right: 10%;
-    grid-area: icon; 
+    grid-area: icon;
+    @media all and (max-width:425px){
+        margin:0;
+    }
 }
 .commander{
     width: 100%;

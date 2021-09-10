@@ -32,8 +32,11 @@
             box-shadow: 0px 0px 12px 1px $color-box-shadow; 
             margin-bottom: 15px;
             overflow: hidden;
+            .test-128{
+                overflow: hidden;
+            }
             > div:first-child > p, > div > div p:first-child{
-                white-space: nowrap;
+                white-space: nowrap; 
                 text-overflow: ellipsis;
                 overflow: inherit;
             }
