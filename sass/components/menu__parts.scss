@@ -1,18 +1,18 @@
 .menu__parts{
-        width: 90%;
-        :nth-of-type(n+2) > div{
-            overflow: hidden;
-        }
-        :nth-of-type(n+2):hover{
-            .menu__parts__detail__btn{
-                width: 75px;
-                transform: scaleX(1);
-                &--icon{
-                    transform: rotate(1turn);
-                }
+    width: 90%;
+    :nth-of-type(n+2) > div{
+        overflow: hidden;
+    }
+    :nth-of-type(n+2):hover{
+        .menu__parts__detail__btn{
+            width: 75px;
+            transform: scaleX(1);
+            &--icon{
+                transform: rotate(1turn);
             }
         }
-        &__title{
+    }
+    &__title{
             ::after{
                 margin-top: 6px;
                 content: "" ;
@@ -32,15 +32,12 @@
             box-shadow: 0px 0px 12px 1px $color-box-shadow; 
             margin-bottom: 15px;
             overflow: hidden;
-            .test-128{
-                overflow: hidden;
-            }
             > div:first-child > p, > div > div p:first-child{
                 white-space: nowrap; 
                 text-overflow: ellipsis;
                 overflow: inherit;
             }
-
+    
             > div:first-child{
                 display: flex;
                 flex-direction: column;
@@ -84,21 +81,21 @@
 
 
 $delay-menu: 0.8s;
-.animation-delay1{
-    animation: delay-1 $delay-menu ease-in;
+.animation-retard-1{
+    animation: fade-in-1 2s both;
 }
-.animation-delay2{
-    animation: delay-2 $delay-menu ease-in;
+.animation-retard-2{
+    animation: fade-in-2 2s both;
+    animation-delay: 0.5s;
 }
-.animation-delay3{
-    animation: delay-3 $delay-menu ease-in;
-}
-.animation-delay4{
-    animation: delay-4 $delay-menu ease-in;
-
+.animation-retard-3{
+    animation: fade-in-3 2s both;
+    animation-delay: 1s;
 }
 
-@keyframes delay-1{
+
+
+@keyframes fade-in-1{
     0%{
         opacity: 0;
     }
@@ -106,25 +103,21 @@ $delay-menu: 0.8s;
         opacity: 1;
     }
 }
-@keyframes delay-2{
+@keyframes fade-in-2{
     0%{
-        opacity: 0;
-    }
-    33%{
         opacity: 0;
     }
     66%{
         opacity: 1;
     }
 }
-@keyframes delay-3{
+@keyframes fade-in-3{
     0%{
-        opacity: 0;
-    }
-    66%{
         opacity: 0;
     }
     100%{
         opacity: 1;
     }
 }
+
+
