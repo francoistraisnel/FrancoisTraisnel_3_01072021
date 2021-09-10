@@ -2,29 +2,28 @@ footer{
     background-color:$color-background-footer;
     color: $color-text-2;
     padding-bottom: 30px;
-
-    .footer__container{
-        a{
-            color: $color-text-2;
-            :hover{
-                cursor: pointer;
-            }
+}
+.footer__container{
+    a{
+        color: $color-text-2;
+        :hover{
+            cursor: pointer;
         }
-        > p:first-child{
-            font-size: 1em;
-            width: 100px;
-            height: auto;
-            color: $color-text-2;
-            padding: 1% 0;
-        }
-        margin-left: 25px;
-        a{
-            display: flex;
-            flex-direction: row;
-        }
-        a i{
-            margin-right: 10px;
-        }
-        line-height: 25px;
     }
+    > p:first-child{
+        font-size: 1em;
+        width: 100px;
+        height: auto;
+        color: $color-text-2;
+        padding: 1% 0;
+    }
+    margin-left: 25px;
+    a{
+        display: flex;
+        flex-direction: row;
+    }
+    a i{
+        margin-right: 10px;
+    }
+    line-height: 25px;
 }

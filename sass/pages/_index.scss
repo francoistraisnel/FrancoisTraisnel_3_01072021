@@ -29,7 +29,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     background-color: $color-background-1;
     h1{
         padding: 50px 0 25px 0;
@@ -49,7 +48,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 .fonctionnement__header{
@@ -65,14 +63,15 @@
     box-shadow: 0 0 3px 1px $color-box-shadow-2;
     font-weight: bolder;
     background: linear-gradient($color-secondary, $color-primary);
-     margin-bottom: 60px;
-     color: $color-text-2;
-     min-width: 200px;
-     padding: 22px;
-     border-radius: 42px;
-     text-align: center;
-     display: inline-block;
-     transition: ease-in-out 0.2s;
+    margin-bottom: 60px;
+    color: $color-text-2;
+    min-width: 200px;
+    padding: 22px;
+    border-radius: 42px;
+    text-align: center;
+    display: inline-block;
+    transition: ease-in-out 0.2s;
+    
 }
 
 .reservation__btn:hover{
