@@ -84,11 +84,11 @@ $delay-menu: 2s;
 }
 .animation-retard-2{
     animation: fade-in-2 $delay-menu both;
-    animation-delay: 0.5s;
+    animation-delay: $delay-menu / 4;
 }
 .animation-retard-3{
     animation: fade-in-3 $delay-menu both;
-    animation-delay: 1s;
+    animation-delay: $delay-menu / 2;
 }
 
 

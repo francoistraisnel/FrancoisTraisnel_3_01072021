@@ -443,7 +443,7 @@ li:hover i {
   padding-bottom: 65px;
 }
 .restaurants-liste__title {
-  padding: 70px 5% 25px 5%;
+  padding: 70px 5% 25px 15px;
 }
 .restaurants-liste__container {
   display: flex;
@@ -460,7 +460,7 @@ li:hover i {
   max-width: 335px;
   width: 90%;
 }
-.carte > a {
+.carte > a:first-child {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -489,22 +489,25 @@ li:hover i {
   padding: 10px;
   line-height: 1.4;
 }
-.carte__footer__icon {
+.carte__icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   display: flex;
   transition: 1s;
-  padding: 20px;
+  padding: 18px 18px 18px 0;
   font-size: 24px;
 }
-.carte__footer__icon :last-child {
+.carte__icon :last-child {
   display: none;
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.carte__footer__icon:hover :first-child {
+.carte__icon:hover :first-child {
   display: none;
 }
-.carte__footer__icon:hover :last-child {
+.carte__icon:hover :last-child {
   display: block;
 }
 .carte__nouveau {
